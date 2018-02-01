@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AuthService } from '../firebase-auth/auth.service';
 
 @Component({
     selector: 'app-template',
@@ -8,5 +7,5 @@ import { AuthService } from '../firebase-auth/auth.service';
 })
 
 export class TemplateComponent {
-    constructor(public authService: AuthService) { }
+    constructor() { }
 }
