@@ -20,7 +20,7 @@ body {
   color: var(--white-text-color);
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 110px;
-  font-size: 13px !important;
+  font-size: 15px !important;
   font-weight: 400 !important;
 }
 
@@ -55,18 +55,18 @@ h4 {
   text-align: center !important;
 }
 
-#section1 {
+#about {
   padding-top: 100px;
-  padding-bottom: 40px;
+  padding-bottom: 160px;
   text-align: center;
 }
 
-#section2, #section3, #section4, #section5 {
+#competences, #experiences, #projects, #contact {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
-#section5 {
+#contact {
   padding-bottom: 120px;
 }
 
@@ -96,6 +96,11 @@ hr.style-two {
 
 .my-photo {
   width: 280px;
+  bottom: 0;
+}
+
+.signture {
+  width: 100px;
 }
 
 .centered-element {
