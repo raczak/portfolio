@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Http, Headers, Response} from '@angular/http';
+import 'rxjs/Rx';
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const onlyDigitsRegex = /^(0|[1-9][0-9]*)$/;
@@ -18,7 +20,7 @@ export class FormComponent implements OnInit {
 
     // messages$: FirebaseListObservable<any[]>;
 
-    constructor(private fb: FormBuilder) {
+    constructor(private fb: FormBuilder, ) {
         this.rForm = fb.group({
             'email': [null, Validators.compose([Validators.required, Validators.pattern(emailRegex)])],
             'phone': [null, Validators.compose([Validators.pattern(onlyDigitsRegex), Validators.minLength(7)])],

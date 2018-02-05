@@ -1,13 +1,13 @@
 <div class="container-fluid col-sm-8">
-	<form [formGroup]="rForm" (ngSubmit)="addMessage(rForm.value)">
+	<form method="POST" action="https://formspree.io/adam.presta@gmail.com" [formGroup]="rForm" (ngSubmit)="addMessage(rForm.value)">
 		<div class="form-row">
 			<div class="form-group col-sm-6">
-				<input type="email" class="form-control" id="form-email" placeholder="Email" formControlName="email">
+				<input type="email" name="email" class="form-control" id="form-email" placeholder="Email" formControlName="email">
 				<div class="alert alert-danger" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">Format: example@gmail.com</div>
 			</div>
 			<div class="form-group col-sm-6">
-				<input type="text" class="form-control" id="phone" placeholder="Numero de tel" formControlName="phone">
-				<div class="alert alert-danger" *ngIf="!rForm.controls['phone'].valid && rForm.controls['phone'].touched">Format: 600700800</div>
+				<input type="email" name="name" class="form-control" id="form-name" placeholder="Name" formControlName="name">
+				<div class="alert alert-danger" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched"></div>
 			</div>
 		</div>
 		<div class="form-group">
